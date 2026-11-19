@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-19T06:07:43.088192+00:00",
+ "updated": "2026-11-19T06:10:41.400448+00:00",
  "count": 349,
  "jobs": [
   {
@@ -49,7 +49,7 @@
    "source": "Himalayas",
    "type": "Contract",
    "location": "United States",
-   "salary": "$65–75/yr",
+   "salary": "$65–75/hr",
    "date": "2026-11-19T05:34:11+00:00",
    "category": "Sales",
    "tags": []
@@ -166,7 +166,7 @@
    "source": "Himalayas",
    "type": "Contract",
    "location": "United States",
-   "salary": "$61–77/yr",
+   "salary": "$61–77/hr",
    "date": "2026-11-19T05:28:25+00:00",
    "category": "Writing and content",
    "tags": []
@@ -231,7 +231,7 @@
    "source": "Himalayas",
    "type": "Contract",
    "location": "United States",
-   "salary": "$60–90/yr",
+   "salary": "$60–90/hr",
    "date": "2026-11-19T05:25:34+00:00",
    "category": "Software and IT",
    "tags": []
@@ -361,7 +361,7 @@
    "source": "Himalayas",
    "type": "Contract",
    "location": "United States",
-   "salary": "$25/yr",
+   "salary": "$25/hr",
    "date": "2026-11-19T05:21:21+00:00",
    "category": "Customer support",
    "tags": []
@@ -413,7 +413,7 @@
    "source": "Himalayas",
    "type": "Contract",
    "location": "Singapore",
-   "salary": "$17–25/yr",
+   "salary": "$17–25/hr",
    "date": "2026-11-19T05:18:50+00:00",
    "category": "Software and IT",
    "tags": []
@@ -426,7 +426,7 @@
    "source": "Himalayas",
    "type": "Full-time",
    "location": "Jordan",
-   "salary": "$50/yr",
+   "salary": "$50/hr",
    "date": "2026-11-19T05:18:31+00:00",
    "category": "Data and AI",
    "tags": []
@@ -517,7 +517,7 @@
    "source": "Himalayas",
    "type": "Contract",
    "location": "United Kingdom",
-   "salary": "$100–120/yr",
+   "salary": "$100–120/hr",
    "date": "2026-11-19T05:11:30+00:00",
    "category": "Data and AI",
    "tags": []
@@ -582,7 +582,7 @@
    "source": "Himalayas",
    "type": "Contract",
    "location": "United States",
-   "salary": "$24–35/yr",
+   "salary": "$24–35/hr",
    "date": "2026-11-19T05:08:22+00:00",
    "category": "Software and IT",
    "tags": []
@@ -647,7 +647,7 @@
    "source": "Himalayas",
    "type": "Contract",
    "location": "Latvia",
-   "salary": "$70–84/yr",
+   "salary": "$70–84/hr",
    "date": "2026-11-19T05:05:41+00:00",
    "category": "Software and IT",
    "tags": []
@@ -686,7 +686,7 @@
    "source": "Himalayas",
    "type": "Full-time",
    "location": "United States",
-   "salary": "$27–49/yr",
+   "salary": "$27–49/hr",
    "date": "2026-11-19T05:03:45+00:00",
    "category": "Healthcare",
    "tags": []
@@ -699,7 +699,7 @@
    "source": "Himalayas",
    "type": "Contract",
    "location": "Canada",
-   "salary": "$20–22/yr",
+   "salary": "$20–22/hr",
    "date": "2026-11-19T05:03:21+00:00",
    "category": "Software and IT",
    "tags": []
@@ -764,7 +764,7 @@
    "source": "Himalayas",
    "type": "Other",
    "location": "United States",
-   "salary": "$87–106/yr",
+   "salary": "$87–106/hr",
    "date": "2026-11-19T04:58:06+00:00",
    "category": "Software and IT",
    "tags": []
@@ -777,7 +777,7 @@
    "source": "Himalayas",
    "type": "Full-time",
    "location": "Canada",
-   "salary": "$15–20/yr",
+   "salary": "$15–20/hr",
    "date": "2026-11-19T04:58:05+00:00",
    "category": "Marketing",
    "tags": []
@@ -790,7 +790,7 @@
    "source": "Himalayas",
    "type": "Contract",
    "location": "Germany",
-   "salary": "$85/yr",
+   "salary": "$85/hr",
    "date": "2026-11-19T04:56:28+00:00",
    "category": "Software and IT",
    "tags": []
@@ -998,7 +998,7 @@
    "source": "Himalayas",
    "type": "Contract",
    "location": "Kosovo",
-   "salary": "$60–70/yr",
+   "salary": "$60–70/hr",
    "date": "2026-11-19T04:46:34+00:00",
    "category": "Data and AI",
    "tags": []
@@ -1011,7 +1011,7 @@
    "source": "Himalayas",
    "type": "Internship",
    "location": "United States",
-   "salary": "$35–41/yr",
+   "salary": "$35–41/hr",
    "date": "2026-11-19T04:46:34+00:00",
    "category": "Admin and operations",
    "tags": []
@@ -4353,7 +4353,7 @@
    "source": "Remote OK",
    "type": "",
    "location": "MÃ¼nchen",
-   "salary": "$4k/yr",
+   "salary": "$4k/mo",
    "date": "2026-11-03T16:00:25+00:00",
    "category": "Marketing",
    "tags": [
@@ -5174,7 +5174,7 @@
    "source": "Remote OK",
    "type": "",
    "location": "Remote",
-   "salary": "$40–48/yr",
+   "salary": "$40–48/hr",
    "date": "2026-10-10T00:00:11+00:00",
    "category": "Customer support",
    "tags": [

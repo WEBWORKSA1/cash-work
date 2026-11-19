@@ -8,22 +8,22 @@
   "Jobicy": {
    "ok": true,
    "count": 100,
-   "fetched": "2026-11-19T06:07:43.088192+00:00"
+   "fetched": "2026-11-19T06:10:41.400448+00:00"
   },
   "Himalayas": {
    "ok": true,
    "count": 100,
-   "fetched": "2026-11-19T06:07:43.088192+00:00"
+   "fetched": "2026-11-19T06:10:41.400448+00:00"
   },
   "Arbeitnow": {
    "ok": true,
    "count": 67,
-   "fetched": "2026-11-19T06:07:43.088192+00:00"
+   "fetched": "2026-11-19T06:10:41.400448+00:00"
   },
   "Remote OK": {
    "ok": true,
    "count": 97,
-   "fetched": "2026-11-19T06:07:43.088192+00:00"
+   "fetched": "2026-11-19T06:10:41.400448+00:00"
   }
  },
  "youtube_ids": {
@@ -34,7 +34,7 @@
   "@aliabdaal": "UCoOae5nYA7VqaXzerajD0lg",
   "@marktilbury": "UCxgAuX3XZROujMmGphN_scA"
  },
- "updated": "2026-11-19T06:07:43.088192+00:00",
+ "updated": "2026-11-19T06:10:41.400448+00:00",
  "jobs": 349,
  "videos": 29,
  "news": 60
