@@ -1,0 +1,52 @@
+<!--meta {"title": "Remote jobs, updated every six hours", "description": "Search {{jobs_count}} remote jobs from Remotive, Jobicy, Himalayas, Arbeitnow and Remote OK in one list. Filter by category, job type and salary, then apply on the original posting.", "scripts": ["jobs.js"]} -->
+<header class="page-head">
+  <div class="wrap">
+    <p class="crumbs"><a href="{{root}}index.html">Home</a> / Remote jobs</p>
+    <h1>Remote jobs you can apply to today</h1>
+    <p class="lede">One searchable list built from five public remote job boards. It refreshes itself every six hours. Data last refreshed {{updated_human}}.</p>
+  </div>
+</header>
+
+<section class="section" style="padding-top:2.5rem">
+  <div class="wrap">
+    <form class="filters" role="search" onsubmit="return false">
+      <label class="field"><span>Search title, company or skill</span><input id="j-q" type="search" placeholder="Customer support, writer, Python" autocomplete="off"></label>
+      <label class="field"><span>Category</span><select id="j-cat"><option value="">All</option></select></label>
+      <label class="field"><span>Source</span><select id="j-src"><option value="">All boards</option></select></label>
+      <label class="field"><span>Job type</span>
+        <select id="j-type"><option value="">Any</option><option value="full">Full-time</option><option value="part">Part-time</option><option value="contract">Contract</option><option value="freelance">Freelance</option><option value="intern">Internship</option></select>
+      </label>
+      <div class="filter-actions"><label class="check"><input id="j-sal" type="checkbox"> Salary listed</label></div>
+    </form>
+    <p class="result-count" id="j-count" aria-live="polite">{{jobs_count}} remote jobs</p>
+    <ul class="job-list" id="job-list">
+{{job_rows}}
+    </ul>
+    <div class="pager" id="j-pager"></div>
+    <p class="attribution">Job listings come from <a href="https://remotive.com/" rel="noopener" target="_blank">Remotive</a>, <a href="https://jobicy.com/" rel="noopener" target="_blank">Jobicy</a>, <a href="https://himalayas.app/" rel="noopener" target="_blank">Himalayas</a>, <a href="https://www.arbeitnow.com/" rel="noopener" target="_blank">Arbeitnow</a> and <a href="https://remoteok.com/" rel="noopener" target="_blank">Remote OK</a> through their public feeds. Each job links to its original posting, where you apply. Cash.Work doesn't screen employers; read our <a href="{{root}}guides/avoid-work-from-home-scams.html">scam guide</a> before sharing personal details.</p>
+
+    {{ad:in_article}}
+
+    <div class="two-col" style="margin-top:3rem">
+      <div class="article">
+        <h2>Getting hired faster from a remote job board</h2>
+        <p>Remote postings attract hundreds of applicants in the first 48 hours, so speed and fit matter more than polish. Apply within a day of a posting going live, mirror two or three phrases from the job description in your first lines, and link to one piece of proof, such as a portfolio, a GitHub profile or a short Loom video.</p>
+        <p>Check where the company can legally hire. Many "remote" roles are limited to one country or a few time zones. The location shown on each job above tells you who can apply.</p>
+        <p>For a step-by-step approach, read the <a href="{{root}}guides/remote-job-search-playbook.html">remote job search playbook</a>.</p>
+      </div>
+      <aside class="aside-box">
+        <h2>Get remote job alerts</h2>
+        <p>Tell us the roles you want. We'll send matching remote jobs and new fast-paying remote gigs.</p>
+        <form class="form" data-form="job-alert" data-subject="Cash.Work: remote job alert sign-up" data-success="Saved. Your first alert is on its way soon.">
+          <label class="field"><span>Email</span><input type="email" name="email" required autocomplete="email"></label>
+          <label class="field"><span>Roles or skills</span><input type="text" name="roles" placeholder="Customer support, data entry" required></label>
+          <label class="field"><span>Country you live in</span><input type="text" name="country" autocomplete="country-name"></label>
+          <label class="check"><input type="checkbox" name="consent" value="yes" required> Email me job alerts. I can unsubscribe any time.</label>
+          <input class="hp" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <button class="btn" type="submit">Create my alert</button>
+          <p class="form-status" role="status"></p>
+        </form>
+      </aside>
+    </div>
+  </div>
+</section>

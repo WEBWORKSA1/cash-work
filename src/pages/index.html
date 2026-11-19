@@ -1,0 +1,203 @@
+<!--meta {"title": "Cash.Work: gigs, shifts and remote jobs ranked by how fast they pay", "description": "Find legit work that pays fast. Compare {{gigs_count}} gig, shift and freelance apps by payout speed, browse remote jobs refreshed every six hours, and work out your real hourly pay.", "scripts": ["cheque.js"], "faq": [["Which gig apps pay the same day?", "Rideshare and delivery apps such as Uber, Lyft, DoorDash, Grubhub and Instacart let you cash out earnings the same day, usually for a small fee or free with their own debit card. Local cash jobs from neighbours and classifieds pay on the spot."], ["Is Cash.Work free?", "Yes. Browsing, the calculators and the matching quiz are free. The site is supported by ads, sponsors and reader donations."], ["Do you hire workers or pay me directly?", "No. Cash.Work is an independent guide. You apply and get paid through each platform or employer directly."], ["How often is the remote job list updated?", "Every six hours, automatically, from public job feeds including Remotive, Jobicy, Himalayas, Arbeitnow and Remote OK."], ["How do I avoid work-from-home scams?", "Never pay to apply, never cash a cheque and send money back, and verify the employer on its own website. Our job scam checker walks you through the warning signs."]]} -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <h1>Find work that pays this week.</h1>
+      <p class="lede">Cash.Work ranks {{gigs_count}} legit gig apps, shift apps and online jobs by the thing most lists skip: how fast the money reaches your account.</p>
+      <div class="hero-actions">
+        <a class="btn" href="{{root}}get-matched.html">Get matched in 60 seconds</a>
+        <a class="btn btn-ghost" href="{{root}}gigs.html?speed=instant">See instant cash-out apps</a>
+      </div>
+      <ul class="hero-facts">
+        <li><strong class="num">{{gigs_count}}</strong> ways to earn, rated by payout speed</li>
+        <li><strong class="num">5</strong> job boards in one feed, refreshed every 6 hours</li>
+        <li><strong class="num">5</strong> free pay calculators</li>
+      </ul>
+    </div>
+
+    <form class="cheque" id="cheque-form" aria-labelledby="cheque-title">
+      <div class="cheque-face">
+      <div class="cheque-top">
+        <p class="cheque-bank" id="cheque-title">Cash.Work Payday<span>Your estimate, before costs and taxes</span></p>
+        <p class="cheque-no" id="cq-no">No. 0001</p>
+      </div>
+      <div class="cheque-line"><span class="k">Date</span><span class="v" id="cq-date"></span></div>
+      <div class="cheque-line"><span class="k">Pay to the order of</span><span class="v">You</span></div>
+      <div class="cheque-amount">
+        <span class="cheque-words" id="cq-words" aria-live="polite"></span>
+        <span class="cheque-figure" id="cq-figure">$0</span>
+      </div>
+      <div class="cheque-line"><span class="k">For</span><span class="v" id="cq-for"></span></div>
+      <div class="cheque-foot">
+        <span class="cheque-micr" aria-hidden="true">0001 2026 0119</span>
+        <span class="cheque-sign">Cash.Work</span>
+      </div>
+      <p class="stamp" id="cq-stamp" aria-hidden="true">PAID<small id="cq-speed">Instant cash-out</small></p>
+      </div>
+      <div class="cheque-controls">
+        <label class="field"><span>Kind of work</span>
+          <select name="work">
+            <option value="delivery">Food delivery</option>
+            <option value="rideshare">Rideshare driving</option>
+            <option value="shopping">Grocery shopping</option>
+            <option value="shifts">Warehouse and event shifts</option>
+            <option value="tasks">Home tasks and handyman</option>
+            <option value="pets">Dog walking and pet sitting</option>
+            <option value="tutoring">Online tutoring</option>
+            <option value="ai">AI training work</option>
+            <option value="research">Paid research studies</option>
+            <option value="freelance">Freelance projects</option>
+          </select>
+        </label>
+        <label class="field"><span>Hours this week: <output id="cq-hours-out">12 hr</output></span>
+          <input type="range" name="hours" min="2" max="50" step="1" value="12">
+        </label>
+        <button class="btn btn-ink" type="submit">Show apps for this work</button>
+        <p class="small muted" style="margin:0;align-self:center">Typical gross pay from public reports. Your city and hours change it.</p>
+      </div>
+    </form>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Paid the same day</h2>
+      <p>These apps let you cash out right after a shift. Most charge a small fee for instant transfers or waive it with their own debit card.</p>
+    </div>
+    <div class="ledger-short">
+      <div class="ledger-head" aria-hidden="true"><span>Platform</span><span>Typical pay</span><span>Paid</span><span>You need</span></div>
+      <ul class="ledger">
+{{gig_rows_fast}}
+      </ul>
+    </div>
+    <p style="margin-top:1.5rem"><a class="btn btn-ghost" href="{{root}}gigs.html">Open the full directory of {{gigs_count}}</a></p>
+  </div>
+</section>
+
+<section class="section band" id="match">
+  <div class="wrap two-col">
+    <div>
+      <h2>Tell us your situation. Get a shortlist and a 7-day plan.</h2>
+      <p class="lede">Six quick questions: how soon you need money, where you can work, what you can use, and your region. We rank every platform for you and show your top three instantly.</p>
+      <p><a class="btn" href="{{root}}get-matched.html">Start the 60-second quiz</a></p>
+      <p class="small muted">Free. No account. Your answers are only used to send you your plan.</p>
+    </div>
+    <div class="aside-box">
+      <h2>Need workers fast?</h2>
+      <p>Restaurants, warehouses, event companies and small businesses: tell us the shift or project and we'll connect you with people looking for exactly that kind of work.</p>
+      <p><a class="btn btn-ink" href="{{root}}for-business.html">Post a gig or shift</a></p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Fresh remote jobs</h2>
+      <p>Pulled automatically from public job boards every six hours. You apply on the original posting.</p>
+    </div>
+    <ul class="job-list">
+{{job_rows_short}}
+    </ul>
+    <p style="margin-top:1.5rem"><a class="btn btn-ghost" href="{{root}}jobs.html">Search all remote jobs</a></p>
+  </div>
+</section>
+
+{{ad:in_feed}}
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Know what you'll really keep</h2>
+      <p>App screens show gross pay. These calculators show what's left after fuel, fees and taxes.</p>
+    </div>
+    <ul class="tool-index">
+      <li><div><h3>Gig pay calculator</h3><p>Turn a week of app earnings into a true hourly rate after car costs and tax.</p></div><a class="btn btn-small btn-ghost" href="{{root}}tools/gig-pay-calculator.html">Calculate</a></li>
+      <li><div><h3>Cash goal planner</h3><p>Pick a target and a date. See how many hours a week it takes and which apps pay fast enough.</p></div><a class="btn btn-small btn-ghost" href="{{root}}tools/cash-goal-planner.html">Plan</a></li>
+      <li><div><h3>Freelance rate calculator</h3><p>The minimum hourly, day and retainer rate that funds the income you want.</p></div><a class="btn btn-small btn-ghost" href="{{root}}tools/freelance-rate-calculator.html">Find my rate</a></li>
+      <li><div><h3>Job scam checker</h3><p>Tick the warning signs in an offer and get a risk rating before you share anything.</p></div><a class="btn btn-small btn-ghost" href="{{root}}tools/job-scam-checker.html">Check an offer</a></li>
+    </ul>
+  </div>
+</section>
+
+<section class="section band">
+  <div class="wrap two-col">
+    <div>
+      <div class="section-head"><h2>Guides that pay off</h2></div>
+      <ul class="guide-list">
+{{guides_list_short}}
+      </ul>
+      <p style="margin-top:1.5rem"><a href="{{root}}guides/index.html">All guides</a></p>
+    </div>
+    <div>
+      <div class="section-head"><h2>Work news</h2></div>
+      <ul class="news-list">
+{{news_rows_short}}
+      </ul>
+      <p style="margin-top:1.5rem"><a href="{{root}}news.html">More headlines</a></p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Watch before you sign up</h2>
+      <p>Ride-alongs, earnings breakdowns and how-tos from creators who do the work. Videos load only when you press play.</p>
+    </div>
+    <ul class="videos">
+{{video_cards_short}}
+    </ul>
+    <p style="margin-top:1.5rem"><a class="btn btn-ghost" href="{{root}}videos.html">Open the video library</a></p>
+  </div>
+</section>
+
+<section class="section band">
+  <div class="wrap">
+    <div class="offer-grid">
+      <div class="offer">
+        <h3>Keep Cash.Work free</h3>
+        <p>Donations pay for hosting, data feeds and new tools, and they fund the monthly contest prizes.</p>
+        <a href="{{root}}support.html">Support the site</a>
+      </div>
+      <div class="offer">
+        <h3>Win this month's prize</h3>
+        <p>Share how you earned your first $100 from a side gig. The most useful story wins a cash prize and a feature.</p>
+        <a href="{{root}}contests.html">Enter the contest</a>
+      </div>
+      <div class="offer">
+        <h3>Reach people looking for work</h3>
+        <p>Sponsor a guide, feature your platform in the directory or recruit through our audience.</p>
+        <a href="{{root}}advertise.html">Advertise and partner</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap two-col">
+    <div class="faq">
+      <h2>Questions people ask first</h2>
+      <details><summary>Which gig apps pay the same day?</summary><p>Rideshare and delivery apps such as Uber, Lyft, DoorDash, Grubhub and Instacart let you cash out the same day, usually for a small fee or free with their own debit card. Local cash jobs from neighbours and classifieds pay on the spot.</p></details>
+      <details><summary>Is Cash.Work free?</summary><p>Yes. Browsing, the calculators and the matching quiz are free. The site is supported by ads, sponsors and reader donations.</p></details>
+      <details><summary>Do you hire workers or pay me directly?</summary><p>No. Cash.Work is an independent guide. You apply and get paid through each platform or employer directly.</p></details>
+      <details><summary>How often is the remote job list updated?</summary><p>Every six hours, automatically, from public job feeds including Remotive, Jobicy, Himalayas, Arbeitnow and Remote OK.</p></details>
+      <details><summary>How do I avoid work-from-home scams?</summary><p>Never pay to apply, never cash a cheque and send money back, and verify the employer on its own website. The <a href="{{root}}tools/job-scam-checker.html">job scam checker</a> walks you through the warning signs.</p></details>
+    </div>
+    <div class="aside-box">
+      <h2>Get fast-pay alerts</h2>
+      <p>New instant cash-out apps, sign-up bonuses and high-paying research studies, sent when there's something worth your time.</p>
+      <form class="form" data-form="alerts" data-subject="Cash.Work: new alert subscriber" data-success="You're on the list. Watch your inbox.">
+        <label class="field"><span>Email</span><input type="email" name="email" required autocomplete="email"></label>
+        <label class="field"><span>Country</span>
+          <select name="country"><option>United States</option><option>Canada</option><option>United Kingdom</option><option>India</option><option>Australia</option><option>Europe</option><option>Other</option></select>
+        </label>
+        <label class="check"><input type="checkbox" name="consent" value="yes" required> I agree to receive emails from Cash.Work and can unsubscribe any time.</label>
+        <input class="hp" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <button class="btn" type="submit">Send me alerts</button>
+        <p class="form-status" role="status"></p>
+      </form>
+    </div>
+  </div>
+</section>

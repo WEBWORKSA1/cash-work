@@ -1,0 +1,12 @@
+# GitHub Pages serves the prebuilt HTML as-is. Jekyll only copies files and
+# keeps project docs, source fragments and scripts off the public site.
+exclude:
+  - README.md
+  - PROMPT.md
+  - RESEARCH.md
+  - build.py
+  - scripts/
+  - src/
+  - .github/
+include:
+  - ads.txt

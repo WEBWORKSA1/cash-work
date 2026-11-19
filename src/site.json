@@ -1,0 +1,31 @@
+{
+  "name": "Cash.Work",
+  "tagline": "Find work that pays fast",
+  "base_url": "https://cash.work/",
+  "locale": "en",
+  "adsense_client": "ca-pub-6620975821265271",
+  "ad_slots": {
+    "in_article": "",
+    "in_feed": "",
+    "sidebar": ""
+  },
+  "contact_strip": {
+    "text": "Contact, if you are interested in this website/domain name/Sponsorship/Advertisement/Partnership",
+    "href": "https://web.works/contact"
+  },
+  "theme_color": "#10233f",
+  "nav": [
+    ["Gigs", "gigs.html"],
+    ["Remote jobs", "jobs.html"],
+    ["Tools", "tools/index.html"],
+    ["Guides", "guides/index.html"],
+    ["Videos", "videos.html"],
+    ["News", "news.html"]
+  ],
+  "footer": {
+    "Find work": [["Gig directory", "gigs.html"], ["Remote jobs", "jobs.html"], ["Get matched", "get-matched.html"], ["Work news", "news.html"], ["Videos", "videos.html"]],
+    "Tools": [["Gig pay calculator", "tools/gig-pay-calculator.html"], ["Hourly to salary", "tools/hourly-to-salary.html"], ["Freelance rate", "tools/freelance-rate-calculator.html"], ["Cash goal planner", "tools/cash-goal-planner.html"], ["Job scam checker", "tools/job-scam-checker.html"]],
+    "Work with us": [["Hire workers", "for-business.html"], ["Advertise and sponsor", "advertise.html"], ["Contests and prizes", "contests.html"], ["Careers", "careers.html"], ["Support Cash.Work", "support.html"]],
+    "About": [["About", "about.html"], ["Contact", "contact.html"], ["Privacy policy", "privacy.html"], ["Terms of use", "terms.html"], ["Disclaimers", "disclaimer.html"]]
+  }
+}

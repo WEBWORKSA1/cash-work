@@ -1,0 +1,65 @@
+<!--meta {"title": "Careers: write, test, film and grow Cash.Work", "description": "Cash.Work hires remote freelancers: writers, gig platform testers, video creators, community moderators, partnership sellers and web developers. Apply in two minutes."} -->
+<header class="page-head">
+  <div class="wrap">
+    <p class="crumbs"><a href="{{root}}index.html">Home</a> / Careers</p>
+    <h1>Get paid to help people find paid work</h1>
+    <p class="lede">We're a small, remote team. All roles are freelance or part-time, paid per piece or per hour, and open worldwide unless noted.</p>
+  </div>
+</header>
+
+<section class="section" style="padding-top:2.5rem">
+  <div class="wrap">
+    <ul class="tool-index">
+      <li><div><h2>Gig platform tester</h2><p>Work a real week on a delivery, shift or task app and report exactly what you earned, spent and learned. Paid per report. US, Canada, UK and Australia.</p></div><a class="btn btn-small btn-ghost" href="#apply" data-role="Gig platform tester">Apply</a></li>
+      <li><div><h2>Personal finance and careers writer</h2><p>Write clear, fact-checked guides on side income, taxes for gig workers and remote job hunting. Paid per article.</p></div><a class="btn btn-small btn-ghost" href="#apply" data-role="Writer">Apply</a></li>
+      <li><div><h2>Short video creator</h2><p>Turn our guides and data into 30–90 second videos for YouTube Shorts, TikTok and Reels. Paid per video.</p></div><a class="btn btn-small btn-ghost" href="#apply" data-role="Video creator">Apply</a></li>
+      <li><div><h2>Community moderator</h2><p>Review contest entries and platform suggestions, and spot scams before they reach readers. Hourly, flexible.</p></div><a class="btn btn-small btn-ghost" href="#apply" data-role="Community moderator">Apply</a></li>
+      <li><div><h2>Partnerships seller</h2><p>Bring in sponsors, featured listings and recruiting partners. Commission on revenue you close.</p></div><a class="btn btn-small btn-ghost" href="#apply" data-role="Partnerships seller">Apply</a></li>
+      <li><div><h2>Front-end developer</h2><p>Build new calculators and data features on a fast static site. Vanilla JavaScript and Python. Paid per project.</p></div><a class="btn btn-small btn-ghost" href="#apply" data-role="Front-end developer">Apply</a></li>
+    </ul>
+  </div>
+</section>
+
+<section class="section band" id="apply">
+  <div class="wrap two-col">
+    <form class="form" data-form="job-application" data-subject="Cash.Work: new talent application" data-success="Application received. If it's a fit, we'll reply within a week.">
+      <h2>Apply</h2>
+      <div class="form-row">
+        <label class="field"><span>Full name</span><input type="text" name="name" required autocomplete="name"></label>
+        <label class="field"><span>Email</span><input type="email" name="email" required autocomplete="email"></label>
+      </div>
+      <div class="form-row">
+        <label class="field"><span>Role</span>
+          <select name="role" id="role-select" required><option value="">Choose a role</option><option>Gig platform tester</option><option>Writer</option><option>Video creator</option><option>Community moderator</option><option>Partnerships seller</option><option>Front-end developer</option><option>Something else</option></select>
+        </label>
+        <label class="field"><span>Country</span><input type="text" name="country" required autocomplete="country-name"></label>
+      </div>
+      <div class="form-row">
+        <label class="field"><span>Portfolio, profile or sample link</span><input type="url" name="portfolio" placeholder="https://"></label>
+        <label class="field"><span>Your rate</span><input type="text" name="rate" placeholder="$ per hour, article or video"></label>
+      </div>
+      <label class="field"><span>Hours available per week</span><input type="number" name="hours" min="1" max="60"></label>
+      <label class="field"><span>Why you'd be good at this</span><textarea name="message" required></textarea></label>
+      <input class="hp" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <button class="btn" type="submit">Send application</button>
+      <p class="form-status" role="status"></p>
+    </form>
+    <aside class="aside-box">
+      <h2>How we work</h2>
+      <ul>
+        <li>Fully remote, async first.</li>
+        <li>Paid within seven days of approved work.</li>
+        <li>We never charge applicants or ask for bank details before a signed agreement.</li>
+      </ul>
+    </aside>
+  </div>
+</section>
+<script>
+document.addEventListener("click", function (e) {
+  var a = e.target.closest("[data-role]");
+  if (!a) return;
+  var s = document.getElementById("role-select");
+  var v = a.getAttribute("data-role");
+  for (var i = 0; i < s.options.length; i++) if (s.options[i].text === v) s.selectedIndex = i;
+});
+</script>

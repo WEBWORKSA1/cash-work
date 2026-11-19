@@ -1,0 +1,40 @@
+<!--meta {"title": "Cash goal planner: hours you need to hit a money target", "description": "Plan how many hours a week you need to earn a set amount by a deadline, and which payout speeds fit your timeline.", "scripts": ["tools.js"]} -->
+<header class="page-head">
+  <div class="wrap">
+    <p class="crumbs"><a href="{{root}}index.html">Home</a> / <a href="index.html">Tools</a> / Cash goal planner</p>
+    <h1>How many hours until you hit your number?</h1>
+    <p class="lede">Rent due, a car repair, a trip or an emergency fund. Set the amount and the date and get a weekly plan.</p>
+  </div>
+</header>
+<section class="section" style="padding-top:2.5rem">
+  <div class="wrap two-col">
+    <form class="tool form" id="t-goal">
+      <div class="form-row">
+        <label class="field"><span>Amount you need ($)</span><input type="number" name="goal" value="1200" min="0" step="10" inputmode="numeric"></label>
+        <label class="field"><span>Already saved ($)</span><input type="number" name="saved" value="200" min="0" step="10" inputmode="numeric"></label>
+      </div>
+      <div class="form-row">
+        <label class="field"><span>Deadline</span><input type="date" name="deadline"></label>
+        <label class="field"><span>What you keep per hour ($)</span><input type="number" name="rate" value="18" min="1" step="0.5" inputmode="decimal"><small>After costs. Not sure? Use the gig pay calculator.</small></label>
+      </div>
+      <div class="tool-out" aria-live="polite">
+        <p class="tool-big" id="goal-big"></p>
+        <p id="goal-sub" class="muted"></p>
+        <table class="breakdown"><tbody id="goal-table"></tbody></table>
+        <p style="margin-top:1rem"><a class="btn btn-small" id="goal-link" data-base="{{root}}gigs.html" href="{{root}}gigs.html">See apps that pay in time</a></p>
+      </div>
+    </form>
+    <div class="article">
+      <h2>Match the payout speed to the deadline</h2>
+      <p>When the money is due in days, how fast a platform pays matters more than its hourly rate. Instant cash-out apps let you move earnings to a debit card the same day. Shift apps often pay within one to three days. Freelance marketplaces and research studies pay after the client or researcher approves your work, which can take a week or two.</p>
+      <p>Approval to start also takes time. Background checks for delivery and rideshare apps can take several days, so apply to two or three platforms at once if your deadline is close.</p>
+      <h2>Make the plan realistic</h2>
+      <ul>
+        <li>Use the hourly figure you keep after costs, not the app's gross figure.</li>
+        <li>Add 20% more hours than the plan says, to cover slow days.</li>
+        <li>Sell one or two things you don't use on local classifieds for a same-day boost.</li>
+      </ul>
+      <p>More ideas: <a href="{{root}}guides/how-to-make-money-fast-this-week.html">how to make money this week without scams</a>.</p>
+    </div>
+  </div>
+</section>

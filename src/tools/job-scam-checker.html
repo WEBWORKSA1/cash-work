@@ -1,0 +1,43 @@
+<!--meta {"title": "Job scam checker: is this job offer legit?", "description": "Tick the warning signs in a job offer, text or email and get a risk rating with clear next steps. Covers fake cheques, upfront fees, chat-only interviews and more.", "scripts": ["tools.js"]} -->
+<header class="page-head">
+  <div class="wrap">
+    <p class="crumbs"><a href="{{root}}index.html">Home</a> / <a href="index.html">Tools</a> / Job scam checker</p>
+    <h1>Is this job offer a scam?</h1>
+    <p class="lede">Tick every statement that's true about the offer. The more you tick, the higher the risk.</p>
+  </div>
+</header>
+<section class="section" style="padding-top:2.5rem">
+  <div class="wrap two-col">
+    <form class="tool form" id="t-scam">
+      <ul class="flags">
+        <li><label class="check"><input type="checkbox" data-w="4" data-tip="Never pay to get a job. Legit employers don't charge for training, equipment or 'activation'."> They asked me to pay for training, equipment, a kit or a background check</label></li>
+        <li><label class="check"><input type="checkbox" data-w="4" data-tip="Overpayment cheques bounce days later and you owe the bank the full amount."> They sent or offered a cheque and asked me to send some of the money back or buy gift cards</label></li>
+        <li><label class="check"><input type="checkbox" data-w="3" data-tip="Real interviews happen by phone or video with a named person you can verify."> The whole interview happened in a chat app like Telegram, WhatsApp or Signal</label></li>
+        <li><label class="check"><input type="checkbox" data-w="3" data-tip="Task scams pay small amounts first, then ask you to deposit money to unlock bigger tasks."> The job is liking videos, rating products or 'completing tasks' to earn commission</label></li>
+        <li><label class="check"><input type="checkbox" data-w="2" data-tip="Unsolicited offers for jobs you never applied to are a classic opener."> I was contacted out of the blue about a job I didn't apply for</label></li>
+        <li><label class="check"><input type="checkbox" data-w="2" data-tip="Ask for the offer in writing from a company email domain and check it on the company site."> The email comes from a free address (Gmail, Outlook) rather than the company's domain</label></li>
+        <li><label class="check"><input type="checkbox" data-w="2" data-tip="Banking details and ID are only needed after a signed offer, through a proper HR system."> They want my bank details, ID or Social Insurance or Security number before any formal offer</label></li>
+        <li><label class="check"><input type="checkbox" data-w="2" data-tip="Pay far above the going rate for easy work is bait."> The pay is far higher than normal for simple work with no experience needed</label></li>
+        <li><label class="check"><input type="checkbox" data-w="1" data-tip="Pressure to decide fast stops you from checking."> They're pushing me to accept or act today</label></li>
+        <li><label class="check"><input type="checkbox" data-w="1" data-tip="Search the company name plus 'scam' and look for a real website and address."> I can't find the company's website, address or real employees online</label></li>
+        <li><label class="check"><input type="checkbox" data-w="2" data-tip="Reshipping and 'payment processing' jobs are often money laundering."> The job involves receiving packages to reship, or moving money through my account</label></li>
+      </ul>
+      <div class="tool-out" aria-live="polite">
+        <div class="meter" id="scam-meter"><span></span></div>
+        <p class="tool-big" style="font-size:1.6rem" id="scam-big"></p>
+        <h3>What to do</h3>
+        <ul id="scam-tips"></ul>
+      </div>
+    </form>
+    <div class="article">
+      <h2>If you think it's a scam</h2>
+      <ol>
+        <li>Stop replying and don't send money, gift card codes, crypto or documents.</li>
+        <li>If you've shared bank details, call your bank now and ask them to watch or freeze the account.</li>
+        <li>Report it: in the US to the FTC at ReportFraud.ftc.gov, in Canada to the Canadian Anti-Fraud Centre, in the UK to Action Fraud, in India on the National Cyber Crime Reporting Portal, and to the platform where you found the ad.</li>
+        <li>Warn others. <a href="{{root}}contact.html">Tell us</a> and we'll flag the pattern for readers.</li>
+      </ol>
+      <p>This checker is a guide, not a guarantee. A legit-looking offer can still be fake, so verify every employer independently. Read the full guide to <a href="{{root}}guides/avoid-work-from-home-scams.html">avoiding work-from-home scams</a>.</p>
+    </div>
+  </div>
+</section>

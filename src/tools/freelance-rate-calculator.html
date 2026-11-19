@@ -1,0 +1,43 @@
+<!--meta {"title": "Freelance rate calculator: the minimum you should charge", "description": "Work out your minimum freelance hourly rate, day rate and retainer from your income goal, business costs, taxes, time off and billable hours.", "scripts": ["tools.js"]} -->
+<header class="page-head">
+  <div class="wrap">
+    <p class="crumbs"><a href="{{root}}index.html">Home</a> / <a href="index.html">Tools</a> / Freelance rate calculator</p>
+    <h1>The lowest rate that still pays your bills</h1>
+    <p class="lede">Start with the income you want to take home and work backwards. Most new freelancers underprice because they forget unbillable hours.</p>
+  </div>
+</header>
+<section class="section" style="padding-top:2.5rem">
+  <div class="wrap two-col">
+    <form class="tool form" id="t-rate">
+      <div class="form-row">
+        <label class="field"><span>Take-home income you want per year ($)</span><input type="number" name="income" value="50000" min="0" step="500" inputmode="numeric"></label>
+        <label class="field"><span>Business costs per year ($)</span><input type="number" name="costs" value="4000" min="0" step="100" inputmode="numeric"><small>Software, equipment, insurance, fees</small></label>
+      </div>
+      <div class="form-row">
+        <label class="field"><span>Tax rate (%)</span><input type="number" name="tax" value="25" min="0" max="70" step="1" inputmode="numeric"></label>
+        <label class="field"><span>Weeks off per year</span><input type="number" name="off" value="6" min="0" max="40" step="1" inputmode="numeric"><small>Holidays, sick days, slow periods</small></label>
+      </div>
+      <div class="form-row">
+        <label class="field"><span>Billable hours per week</span><input type="number" name="billable" value="25" min="1" max="70" step="1" inputmode="numeric"><small>Hours you can invoice, not hours you work</small></label>
+        <label class="field"><span>Safety margin (%)</span><input type="number" name="buffer" value="10" min="0" max="100" step="1" inputmode="numeric"></label>
+      </div>
+      <div class="tool-out" aria-live="polite">
+        <p class="tool-big" id="rate-big"></p>
+        <p id="rate-sub" class="muted"></p>
+        <table class="breakdown"><tbody id="rate-table"></tbody></table>
+      </div>
+    </form>
+    <div class="article">
+      <h2>Why billable hours matter most</h2>
+      <p>A 40-hour week as a freelancer rarely means 40 invoiced hours. Finding clients, writing proposals, admin, learning and revisions you can't bill can easily take a third of your time. If you only bill 25 hours a week for 46 weeks, that's 1,150 hours a year, not 2,080.</p>
+      <p>The calculator grosses up your take-home goal for tax, adds business costs, divides by realistic billable hours and adds a safety margin for late payments and quiet months.</p>
+      <h2>Using the number</h2>
+      <ul>
+        <li>Treat the result as a floor. Quote above it when the client's budget or the value of the work allows.</li>
+        <li>For fixed-price projects, estimate hours generously and multiply by your rate.</li>
+        <li>Platform fees reduce what you receive. If a marketplace keeps 10–20%, raise your listed rate to compensate.</li>
+      </ul>
+      <p>New to freelancing? Read <a href="{{root}}guides/freelancing-first-client-in-7-days.html">how to land a first client in seven days</a>.</p>
+    </div>
+  </div>
+</section>

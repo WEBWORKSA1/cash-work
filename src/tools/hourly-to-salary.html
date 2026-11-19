@@ -1,0 +1,33 @@
+<!--meta {"title": "Hourly to salary converter (and salary to hourly)", "description": "Convert an hourly wage into daily, weekly, biweekly, monthly and yearly pay, or turn a salary into an hourly rate. Adjust hours per week and paid weeks per year.", "scripts": ["tools.js"]} -->
+<header class="page-head">
+  <div class="wrap">
+    <p class="crumbs"><a href="{{root}}index.html">Home</a> / <a href="index.html">Tools</a> / Hourly to salary</p>
+    <h1>Hourly to salary, both ways</h1>
+    <p class="lede">Compare a shift job with a salaried offer, or see what a gig rate adds up to over a year.</p>
+  </div>
+</header>
+<section class="section" style="padding-top:2.5rem">
+  <div class="wrap two-col">
+    <form class="tool form" id="t-salary">
+      <label class="field"><span>Convert</span>
+        <select name="mode"><option value="toSalary">Hourly rate to salary</option><option value="toHourly">Salary to hourly rate</option></select>
+      </label>
+      <label class="field"><span id="sal-label">Hourly rate ($)</span><input type="number" name="amount" value="22" min="0" step="0.25" inputmode="decimal"></label>
+      <div class="form-row">
+        <label class="field"><span>Hours per week</span><input type="number" name="hpw" value="40" min="1" max="100" step="0.5" inputmode="decimal"></label>
+        <label class="field"><span>Paid weeks per year</span><input type="number" name="weeks" value="52" min="1" max="52" step="1" inputmode="numeric"><small>Use 50 if you take two unpaid weeks off.</small></label>
+      </div>
+      <div class="tool-out" aria-live="polite">
+        <p class="tool-big" id="sal-big"></p>
+        <table class="breakdown"><tbody id="sal-table"></tbody></table>
+      </div>
+    </form>
+    <div class="article">
+      <h2>The quick rule</h2>
+      <p>At 40 hours a week for 52 weeks, a year has 2,080 paid hours. So an hourly rate times 2,080 gives the annual figure, and a salary divided by 2,080 gives the hourly equivalent. A $22 hourly job is about $45,760 a year; a $55,000 salary is about $26.44 an hour.</p>
+      <h2>Comparing gig work with a salary</h2>
+      <p>A salary usually comes with paid holidays, employer pension or retirement contributions and, in many countries, employer-paid health coverage and payroll taxes. Gig and freelance pay doesn't. To compare fairly, reduce the paid weeks for gig work to reflect time off, and run the gig figure through the <a href="gig-pay-calculator.html">gig pay calculator</a> first to remove costs.</p>
+      <p>Freelancers should set rates with the <a href="freelance-rate-calculator.html">freelance rate calculator</a>, which accounts for unbillable time and business costs.</p>
+    </div>
+  </div>
+</section>

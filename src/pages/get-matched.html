@@ -1,0 +1,120 @@
+<!--meta {"title": "Get matched: your best ways to earn, ranked in 60 seconds", "description": "Answer six quick questions about timing, location, vehicle, skills and region. Get the gig apps and online jobs that fit you best, plus a free 7-day plan to start earning.", "scripts": ["match.js"]} -->
+<header class="page-head">
+  <div class="wrap">
+    <p class="crumbs"><a href="{{root}}index.html">Home</a> / Get matched</p>
+    <h1>Your shortlist of ways to earn, in six questions</h1>
+    <p class="lede">We score all {{gigs_count}} platforms in the directory against your answers. You see your top three straight away; your full list and a 7-day plan unlock with your email.</p>
+  </div>
+</header>
+
+<section class="section" style="padding-top:2.5rem">
+  <div class="wrap two-col">
+    <div>
+      <form class="matcher" id="match-quiz" novalidate>
+        <div class="steps-progress" id="match-progress" aria-hidden="true"></div>
+
+        <fieldset class="q">
+          <h3>How soon do you need the money?</h3>
+          <div class="options">
+            <div class="opt"><input type="radio" name="when" id="w1" value="today"><label for="w1">This week<small>Same-day or next-day pay matters most</small></label></div>
+            <div class="opt"><input type="radio" name="when" id="w2" value="month"><label for="w2">This month<small>A few days' wait is fine</small></label></div>
+            <div class="opt"><input type="radio" name="when" id="w3" value="wait"><label for="w3">I can wait<small>Show the best-paying options</small></label></div>
+          </div>
+          <p class="q-msg form-status err" role="alert"></p>
+          <div class="q-nav"><span></span><button class="btn" type="button" data-next>Next question</button></div>
+        </fieldset>
+
+        <fieldset class="q">
+          <h3>Where do you want to work?</h3>
+          <div class="options">
+            <div class="opt"><input type="radio" name="where" id="p1" value="out"><label for="p1">Out and about<small>Driving, deliveries, shifts, local jobs</small></label></div>
+            <div class="opt"><input type="radio" name="where" id="p2" value="home"><label for="p2">From home<small>Online work only</small></label></div>
+            <div class="opt"><input type="radio" name="where" id="p3" value="either"><label for="p3">Either is fine<small>Show me everything</small></label></div>
+          </div>
+          <p class="q-msg form-status err" role="alert"></p>
+          <div class="q-nav"><button class="btn btn-ghost" type="button" data-back>Back</button><button class="btn" type="button" data-next>Next question</button></div>
+        </fieldset>
+
+        <fieldset class="q">
+          <h3>What can you use for work?</h3>
+          <div class="options">
+            <div class="opt"><input type="radio" name="vehicle" id="v1" value="car"><label for="v1">A car<small>Insured and reliable</small></label></div>
+            <div class="opt"><input type="radio" name="vehicle" id="v2" value="bike"><label for="v2">Bike or scooter<small>No car</small></label></div>
+            <div class="opt"><input type="radio" name="vehicle" id="v3" value="none"><label for="v3">Neither<small>Phone or computer only</small></label></div>
+          </div>
+          <p class="q-msg form-status err" role="alert"></p>
+          <div class="q-nav"><button class="btn btn-ghost" type="button" data-back>Back</button><button class="btn" type="button" data-next>Next question</button></div>
+        </fieldset>
+
+        <fieldset class="q">
+          <h3>What are you happy doing? Pick all that fit.</h3>
+          <div class="options">
+            <div class="opt"><input type="checkbox" name="skills" id="s1" value="driving"><label for="s1">Driving and errands</label></div>
+            <div class="opt"><input type="checkbox" name="skills" id="s2" value="physical"><label for="s2">Physical work<small>Warehouse, moving, assembly</small></label></div>
+            <div class="opt"><input type="checkbox" name="skills" id="s3" value="people"><label for="s3">Caring for pets or people</label></div>
+            <div class="opt"><input type="checkbox" name="skills" id="s4" value="pro"><label for="s4">A professional skill<small>Writing, design, code, admin</small></label></div>
+            <div class="opt"><input type="checkbox" name="skills" id="s5" value="teaching"><label for="s5">Teaching or a language</label></div>
+            <div class="opt"><input type="checkbox" name="skills" id="s6" value="opinions"><label for="s6">Sharing opinions and testing products</label></div>
+            <div class="opt"><input type="checkbox" name="skills" id="s7" value="assets"><label for="s7">Selling stuff or renting out space or a car</label></div>
+          </div>
+          <p class="q-msg form-status err" role="alert"></p>
+          <div class="q-nav"><button class="btn btn-ghost" type="button" data-back>Back</button><button class="btn" type="button" data-next>Next question</button></div>
+        </fieldset>
+
+        <fieldset class="q">
+          <h3>Where do you live?</h3>
+          <div class="options">
+            <div class="opt"><input type="radio" name="region" id="r1" value="US"><label for="r1">United States</label></div>
+            <div class="opt"><input type="radio" name="region" id="r2" value="CA"><label for="r2">Canada</label></div>
+            <div class="opt"><input type="radio" name="region" id="r3" value="UK"><label for="r3">United Kingdom</label></div>
+            <div class="opt"><input type="radio" name="region" id="r4" value="IN"><label for="r4">India</label></div>
+            <div class="opt"><input type="radio" name="region" id="r5" value="AU"><label for="r5">Australia</label></div>
+            <div class="opt"><input type="radio" name="region" id="r6" value="EU"><label for="r6">Europe</label></div>
+            <div class="opt"><input type="radio" name="region" id="r7" value="Other"><label for="r7">Somewhere else</label></div>
+          </div>
+          <p class="q-msg form-status err" role="alert"></p>
+          <div class="q-nav"><button class="btn btn-ghost" type="button" data-back>Back</button><button class="btn" type="button" data-next>Next question</button></div>
+        </fieldset>
+
+        <fieldset class="q">
+          <h3>How much time, and what's the goal?</h3>
+          <label class="field"><span>Hours a week: <output id="hours-out">10 hours</output></span><input type="range" name="hours" min="2" max="50" value="10"></label>
+          <label class="field" style="margin-top:1rem"><span>Monthly income goal ($)</span><input type="number" name="goal" min="0" step="50" value="500" inputmode="numeric"></label>
+          <div class="q-nav" style="margin-top:1.5rem"><button class="btn btn-ghost" type="button" data-back>Back</button><button class="btn" type="button" data-next>Show my matches</button></div>
+        </fieldset>
+      </form>
+
+      <div id="match-results" hidden>
+        <h2>Your best matches</h2>
+        <p class="lede" id="match-summary"></p>
+        <ol class="match-results" id="match-list"></ol>
+
+        <div class="unlock" id="unlock-box">
+          <h3>Unlock <span id="unlock-count">your full list</span></h3>
+          <p>We'll show them here right away and email you a copy with your plan.</p>
+          <form class="form" id="match-lead" data-form="match-lead" data-subject="Cash.Work: new matched lead" data-success="Unlocked. Your full list and plan are below.">
+            <div class="form-row">
+              <label class="field"><span>First name</span><input type="text" name="first_name" required autocomplete="given-name"></label>
+              <label class="field"><span>Email</span><input type="email" name="email" required autocomplete="email"></label>
+            </div>
+            <label class="field"><span>Mobile number (optional, for urgent shift offers)</span><input type="tel" name="phone" autocomplete="tel"></label>
+            <input type="hidden" name="quiz_answers"><input type="hidden" name="top_matches">
+            <label class="check"><input type="checkbox" name="consent" value="yes" required> Send me my plan and occasional fast-pay work alerts. Cash.Work may introduce me to partner platforms or employers that match my answers. I can opt out any time.</label>
+            <input class="hp" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+            <button class="btn" type="submit">Unlock my list and plan</button>
+            <p class="form-status" role="status"></p>
+          </form>
+          <p class="small muted" style="margin-top:1rem">Prefer not to share your email? <a href="{{root}}gigs.html">Browse the full directory</a> instead.</p>
+        </div>
+        <div id="match-plan" class="article" hidden style="margin-top:2rem"></div>
+        <p style="margin-top:1.5rem"><button class="btn btn-ghost btn-small" type="button" id="match-restart">Change my answers</button></p>
+      </div>
+    </div>
+
+    <aside class="aside-box">
+      <h2>How matching works</h2>
+      <p>Each platform gets points for payout speed (weighted by how soon you need money), for fitting the kind of work you chose, and for starting pay. Anything that needs a car you don't have, or doesn't operate in your country, is left out.</p>
+      <p>We don't take payment to rank platforms higher. Read the <a href="{{root}}disclaimer.html">disclaimers</a> and <a href="{{root}}privacy.html">privacy policy</a>.</p>
+    </aside>
+  </div>
+</section>

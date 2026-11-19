@@ -1,0 +1,94 @@
+<!--meta {"title": "Gig and side hustle directory: {{gigs_count}} legit ways to earn, ranked by payout speed", "description": "Compare {{gigs_count}} gig apps, shift apps, freelance sites and paid research platforms by typical pay, payout speed, requirements and region. Filter by country and compare up to three side by side.", "scripts": ["gigs.js"]} -->
+<header class="page-head">
+  <div class="wrap">
+    <p class="crumbs"><a href="{{root}}index.html">Home</a> / Gig directory</p>
+    <h1>Every legit way to earn, sorted by how fast it pays</h1>
+    <p class="lede">{{gigs_count}} platforms for delivery, rideshare, shifts, home tasks, pet care, freelancing, tutoring, paid research and selling. Pay figures are typical gross ranges from public reports; your city and hours change them.</p>
+    <ul class="chips" aria-label="Filter by payout speed">
+      <li><button class="chip" type="button" data-speed-chip="instant" aria-pressed="false">Instant cash-out</button></li>
+      <li><button class="chip" type="button" data-speed-chip="fast" aria-pressed="false">Within days</button></li>
+      <li><button class="chip" type="button" data-speed-chip="weekly" aria-pressed="false">Weekly</button></li>
+      <li><button class="chip" type="button" data-speed-chip="milestone" aria-pressed="false">After approval</button></li>
+    </ul>
+  </div>
+</header>
+
+<section class="section" style="padding-top:2.5rem">
+  <div class="wrap">
+    <form class="filters" role="search" onsubmit="return false">
+      <label class="field"><span>Search</span><input id="g-q" type="search" placeholder="Try dog walking, tutoring, Canada" autocomplete="off"></label>
+      <label class="field"><span>Type of work</span>
+        <select id="g-cat">
+          <option value="">All</option>
+          <option value="delivery">Delivery</option>
+          <option value="rideshare">Rideshare</option>
+          <option value="shopping">Grocery shopping</option>
+          <option value="shifts">Hourly shifts</option>
+          <option value="tasks">Home and local tasks</option>
+          <option value="pets">Pet care</option>
+          <option value="care">Child and senior care</option>
+          <option value="freelance">Freelance</option>
+          <option value="ai">AI training</option>
+          <option value="research">Paid research</option>
+          <option value="tutoring">Tutoring and teaching</option>
+          <option value="selling">Selling</option>
+          <option value="rental">Renting out things</option>
+          <option value="micro">Surveys and micro-tasks</option>
+        </select>
+      </label>
+      <label class="field"><span>Paid</span>
+        <select id="g-speed">
+          <option value="">Any speed</option>
+          <option value="instant">Instant cash-out</option>
+          <option value="fast">Within days</option>
+          <option value="weekly">Weekly</option>
+          <option value="milestone">After approval</option>
+        </select>
+      </label>
+      <label class="field"><span>Where you work</span>
+        <select id="g-mode"><option value="">Anywhere</option><option value="local">In person</option><option value="remote">From home</option></select>
+      </label>
+      <label class="field"><span>Country</span>
+        <select id="g-region"><option value="">All</option><option value="US">United States</option><option value="CA">Canada</option><option value="UK">United Kingdom</option><option value="IN">India</option><option value="AU">Australia</option><option value="EU">Europe</option></select>
+      </label>
+      <label class="field"><span>Sort by</span>
+        <select id="g-sort"><option value="speed">Fastest payout</option><option value="pay">Highest starting pay</option><option value="name">Name</option></select>
+      </label>
+      <div class="filter-actions"><label class="check"><input id="g-nocar" type="checkbox"> No car needed</label><button class="btn btn-small btn-ghost" id="g-reset" type="button">Clear filters</button></div>
+    </form>
+
+    <p class="result-count" id="g-count" aria-live="polite">Showing all {{gigs_count}} platforms</p>
+    <div class="ledger-head" aria-hidden="true"><span>Platform</span><span>Typical pay</span><span>Paid</span><span>You need / where</span><span>Compare</span></div>
+    <ul class="ledger" id="gig-ledger">
+{{gig_rows}}
+    </ul>
+    <section id="compare-out" class="section" hidden aria-labelledby="compare-title"></section>
+
+    {{ad:in_article}}
+
+    <div class="two-col" style="margin-top:3rem">
+      <div class="article">
+        <h2>How we rate payout speed</h2>
+        <p><strong>Instant cash-out</strong> means you can move earnings to a bank card the same day, often within minutes, sometimes for a small fee. <strong>Within days</strong> means payment usually lands in one to three business days after the work. <strong>Weekly</strong> means a fixed weekly payday. <strong>After approval</strong> means a client, researcher or buyer has to approve the work first, which can take a few days to two weeks.</p>
+        <p>Pay ranges are gross, before fuel, wear, fees and taxes. Use the <a href="{{root}}tools/gig-pay-calculator.html">gig pay calculator</a> to see what you keep. Platforms change their pay and payout rules often, so always confirm on the official site.</p>
+        <p class="small muted">Listings are editorial. Cash.Work isn't paid to rank any platform. If we add referral links later, they'll be labelled and won't change the order.</p>
+      </div>
+      <aside class="aside-box">
+        <h2>Is your platform missing?</h2>
+        <p>Suggest a legit app or company that pays people for work. We review every suggestion before listing it.</p>
+        <form class="form" data-form="suggest-platform" data-subject="Cash.Work: platform suggestion" data-success="Thanks. We'll review it this week.">
+          <label class="field"><span>Platform name and website</span><input type="text" name="platform" required></label>
+          <label class="field"><span>Your email (optional)</span><input type="email" name="email" autocomplete="email"></label>
+          <label class="check"><input type="checkbox" name="i_represent" value="yes"> I work for this platform</label>
+          <input class="hp" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <button class="btn btn-small" type="submit">Suggest platform</button>
+          <p class="form-status" role="status"></p>
+        </form>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<div class="compare-bar" id="compare-bar" aria-live="polite">
+  <div class="wrap"><span id="compare-text">0 selected</span><button class="btn btn-small" id="compare-go" type="button">Compare side by side</button></div>
+</div>

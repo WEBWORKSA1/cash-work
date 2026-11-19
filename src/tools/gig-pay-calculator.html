@@ -1,0 +1,45 @@
+<!--meta {"title": "Gig pay calculator: your true hourly pay after costs", "description": "Free gig pay calculator for delivery and rideshare drivers. Enter earnings, tips, hours, distance and costs to see your real hourly pay after vehicle costs and taxes.", "scripts": ["tools.js"]} -->
+<header class="page-head">
+  <div class="wrap">
+    <p class="crumbs"><a href="{{root}}index.html">Home</a> / <a href="index.html">Tools</a> / Gig pay calculator</p>
+    <h1>What does an hour of app work really pay?</h1>
+    <p class="lede">The app shows gross earnings. This shows what's left after fuel, wear on your car, other costs and money put aside for tax.</p>
+  </div>
+</header>
+<section class="section" style="padding-top:2.5rem">
+  <div class="wrap two-col">
+    <form class="tool form" id="t-gig">
+      <div class="form-row">
+        <label class="field"><span>Earnings shown in the app ($)</span><input type="number" name="gross" value="320" min="0" step="1" inputmode="decimal"></label>
+        <label class="field"><span>Tips not included above ($)</span><input type="number" name="tips" value="0" min="0" step="1" inputmode="decimal"></label>
+      </div>
+      <div class="form-row">
+        <label class="field"><span>Hours logged in, including waiting</span><input type="number" name="hours" value="16" min="0" step="0.5" inputmode="decimal"></label>
+        <label class="field"><span>Miles or km driven</span><input type="number" name="distance" value="240" min="0" step="1" inputmode="decimal"></label>
+      </div>
+      <div class="form-row">
+        <label class="field"><span>Vehicle cost per mile or km ($)</span><input type="number" name="cost" value="0.30" min="0" step="0.01" inputmode="decimal"><small>Fuel, maintenance, tyres and depreciation. Bikes: use 0.</small></label>
+        <label class="field"><span>Other costs ($)</span><input type="number" name="other" value="15" min="0" step="1" inputmode="decimal"><small>Phone data, parking, bags, tolls</small></label>
+      </div>
+      <label class="field"><span>Tax set-aside (%)</span><input type="number" name="tax" value="20" min="0" max="60" step="1" inputmode="decimal"><small>Many self-employed workers keep 20–30% aside. Check your own tax rate.</small></label>
+      <div class="tool-out" aria-live="polite">
+        <p class="tool-big" id="gig-big"></p>
+        <p id="gig-sub" class="muted"></p>
+        <table class="breakdown"><tbody id="gig-table"></tbody></table>
+      </div>
+    </form>
+    <div class="article">
+      <h2>Why the number in the app is too high</h2>
+      <p>Delivery and rideshare apps report what they paid you, not what you made. Every mile you drive costs money: fuel or charging, oil changes, tyres, brakes, insurance and the value your car loses with each kilometre. Waiting time between orders also counts, even if the app doesn't show it as "active" time.</p>
+      <p>Two numbers make the biggest difference. First, use your <strong>logged-in hours</strong>, not just active delivery time. Second, use an honest <strong>cost per mile or kilometre</strong>. Fuel alone is often 10–15 cents a mile for an efficient car; once maintenance and depreciation are included, many drivers' full cost is far higher. If you're unsure, try 0.30 for fuel and maintenance only and a higher figure for the full cost of owning the car.</p>
+      <h2>How to raise your real hourly pay</h2>
+      <ul>
+        <li>Decline long trips with low pay per mile; set your own minimum and stick to it.</li>
+        <li>Work the busiest windows for your city, usually meal times and weekend nights.</li>
+        <li>Run two apps at once in slow periods, then pause one when the other sends a good offer.</li>
+        <li>Track mileage from the moment you start working. It's a deductible expense in many countries.</li>
+      </ul>
+      <p>Compare apps that pay the same day in the <a href="{{root}}gigs.html?speed=instant">gig directory</a>, and read our guide to <a href="{{root}}guides/true-hourly-pay-gig-work.html">calculating true hourly pay</a>.</p>
+    </div>
+  </div>
+</section>
