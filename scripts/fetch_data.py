@@ -33,7 +33,6 @@ MAX_JOBS = 450
 YOUTUBE_CHANNELS = [
     # (label, channel id or @handle). Handles are resolved to channel IDs at run time.
     ("The Rideshare Guy", "UCCwyU2RqlalzpKIrUhYWHfw"),
-    ("Side Hustle Nation", "@SideHustleNation"),
     ("Upwork", "@Upwork"),
     ("Fiverr", "@fiverr"),
     ("NerdWallet", "@NerdWallet"),
@@ -41,7 +40,9 @@ YOUTUBE_CHANNELS = [
     ("Ali Abdaal", "@aliabdaal"),
     ("Mark Tilbury", "@marktilbury"),
 ]
-NEWS_QUERIES = ["gig economy workers", "side hustle", "remote work jobs", "gig workers pay", "freelance economy"]
+NEWS_QUERIES = ['"gig economy"', '"gig workers"', '"side hustle" income', '"remote jobs" OR "remote work" hiring', 'freelancers earnings']
+NEWS_MUST = re.compile(r"gig|side hustle|side income|freelanc|remote (?:work|job)|job|hiring|worker|wage|pay|salary|income|earn|uber|lyft|doordash|instacart|delivery|rideshare|employ|career|labou?r|contractor", re.I)
+NEWS_SKIP = re.compile(r"\b(?:cast|movie|film|drama|series|trailer|album|song|thieves|murder|killed|arrested|obituary)\b", re.I)
 
 
 def log(msg: str) -> None:
@@ -108,7 +109,15 @@ def to_iso(value) -> str:
             return NOW.isoformat()
 
 
-def money_range(lo, hi, cur="USD", period="yr") -> str:
+def money_range(lo, hi, cur="USD", period="") -> str:
+    if not period:
+        try:
+            top = max(float(lo or 0), float(hi or 0))
+        except (TypeError, ValueError):
+            top = 0
+        # Some feeds give hourly or monthly figures in the same fields as annual ones.
+        period = "hr" if 0 < top < 300 else ("mo" if 0 < top < 20000 else "yr")
+
     def f(v):
         try:
             v = float(v)
@@ -384,6 +393,8 @@ def refresh_news() -> list:
     seen, out = set(), []
     for n in items:
         k = re.sub(r"\W+", "", n["title"].lower())[:60]
+        if not NEWS_MUST.search(n["title"]) or NEWS_SKIP.search(n["title"]):
+            continue
         if k and k not in seen and n.get("url"):
             seen.add(k)
             out.append(n)

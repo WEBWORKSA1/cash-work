@@ -138,6 +138,20 @@ def jobs_rows(jobs: list[dict], limit: int) -> str:
     return "\n".join(out)
 
 
+def diverse(jobs: list[dict], n: int) -> list[dict]:
+    """Newest jobs, taken round-robin across sources so one board doesn't fill the preview."""
+    by_src: dict[str, list] = {}
+    for j in jobs:
+        by_src.setdefault(j.get("source", ""), []).append(j)
+    out, i = [], 0
+    while len(out) < n and any(len(v) > i for v in by_src.values()):
+        for v in by_src.values():
+            if len(v) > i and len(out) < n:
+                out.append(v[i])
+        i += 1
+    return out
+
+
 def news_rows(news: list[dict], limit: int) -> str:
     if not news:
         return '<li class="empty-state">Headlines refresh every six hours.</li>'
@@ -372,7 +386,7 @@ def main() -> None:
         "gig_rows": gigs_rows(gigs),
         "gig_rows_fast": gigs_rows([g for g in gigs if g["speed"] == "instant"][:8]),
         "job_rows": jobs_rows(jobs, 60),
-        "job_rows_short": jobs_rows(jobs, 8),
+        "job_rows_short": jobs_rows(diverse(jobs, 8), 8),
         "news_rows": news_rows(news, 40),
         "news_rows_short": news_rows(news, 6),
         "video_cards": video_cards(videos, 24),
