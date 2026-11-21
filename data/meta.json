@@ -2,28 +2,28 @@
  "sources": {
   "Remotive": {
    "ok": true,
-   "count": 15,
-   "fetched": "2026-11-20T15:28:36.084292+00:00"
+   "count": 16,
+   "fetched": "2026-11-20T23:59:44.203166+00:00"
   },
   "Jobicy": {
    "ok": true,
    "count": 100,
-   "fetched": "2026-11-20T15:28:36.084292+00:00"
+   "fetched": "2026-11-20T23:59:44.203166+00:00"
   },
   "Himalayas": {
    "ok": true,
    "count": 100,
-   "fetched": "2026-11-20T15:28:36.084292+00:00"
+   "fetched": "2026-11-20T23:59:44.203166+00:00"
   },
   "Arbeitnow": {
    "ok": true,
-   "count": 70,
-   "fetched": "2026-11-20T15:28:36.084292+00:00"
+   "count": 69,
+   "fetched": "2026-11-20T23:59:44.203166+00:00"
   },
   "Remote OK": {
    "ok": true,
    "count": 98,
-   "fetched": "2026-11-20T15:28:36.084292+00:00"
+   "fetched": "2026-11-20T23:59:44.203166+00:00"
   }
  },
  "youtube_ids": {
@@ -34,8 +34,8 @@
   "@aliabdaal": "UCoOae5nYA7VqaXzerajD0lg",
   "@marktilbury": "UCxgAuX3XZROujMmGphN_scA"
  },
- "updated": "2026-11-20T15:28:36.084292+00:00",
- "jobs": 376,
+ "updated": "2026-11-20T23:59:44.203166+00:00",
+ "jobs": 370,
  "videos": 29,
  "news": 60
 }
