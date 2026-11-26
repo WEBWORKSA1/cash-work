@@ -1,6 +1,12 @@
 {
- "updated": "2026-11-26T08:20:13.341445+00:00",
+ "updated": "2026-11-26T21:33:37.057480+00:00",
  "videos": [
+  {
+   "id": "-lCnLLXM528",
+   "title": "This Uber Driver Reports $2,500+ Weeks: Here’s His Strategy",
+   "channel": "The Rideshare Guy",
+   "date": "2026-11-26T16:00:04+00:00"
+  },
   {
    "id": "gLIgvCYTdeI",
    "title": "Drivers Are Using ChatGPT to Fight Uber Deactivations",
@@ -30,12 +36,6 @@
    "title": "Uber Updates \"Record My Ride\"",
    "channel": "The Rideshare Guy",
    "date": "2026-11-23T23:00:02+00:00"
-  },
-  {
-   "id": "j-tnLuCg6Xo",
-   "title": "I Tracked Every Ride. Uber’s Pay Actually Surprised Me",
-   "channel": "The Rideshare Guy",
-   "date": "2026-11-23T20:00:04+00:00"
   },
   {
    "id": "Slb7fu42dkc",
@@ -81,7 +81,7 @@
   },
   {
    "id": "ZzDRSxx3zgY",
-   "title": "I Built A Business From Scratch Only Following Claude’s Advice",
+   "title": "I Started Again From Scratch Only Following Claude’s Advice",
    "channel": "Mark Tilbury",
    "date": "2026-11-16T12:59:43+00:00"
   },
